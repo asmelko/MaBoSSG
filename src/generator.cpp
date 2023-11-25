@@ -97,7 +97,7 @@ void generator::generate_node_transitions(std::ostringstream& os) const
 			identifier_expression(node.name).generate_code(drv_, node.name, os);
 			os << ";" << std::endl;
 			os << "    const bool logic = ";
-			node.get_attr("logic").second->generate_code(drv_, node.name, os);
+			node.get_attr("logic").second->simplify()->generate_code(drv_, node.name, os);
 			os << ";" << std::endl;
 
 			if (up_val == down_val)

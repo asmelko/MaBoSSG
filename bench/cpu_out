@@ -1,3 +1,4 @@
+max_time;nodes;formula_size;sample_count;threads;parsing;simulation;visualization;
 100;10;4;1000000;64;1380;11439596;54205;
 100;10;4;1000000;64;485;10669225;12166;
 100;10;4;1000000;64;444;11121473;25215;

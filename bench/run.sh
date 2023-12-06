@@ -39,3 +39,14 @@ for i in {4..49..5}
 do 
   runonce ${data_dir}/synth-100t-100n-${i}f-1000000s 100 100 $i 1000000
 done
+
+for i in {200..1000..200}
+do 
+  for j in {2000000..10000000..2000000}
+  do
+    for k in 4 24 49
+    do
+      runonce ${data_dir}/synth-100t-${i}n-${k}f-${j}s 100 $i $k $j
+    done
+  done
+done

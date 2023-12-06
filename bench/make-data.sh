@@ -29,3 +29,14 @@ for i in {4..49..5}
 do 
   python3 ${root_dir}/data/generate-synth.py --signal_length $i --nodes 100 ${data_dir}/synth-100t-100n-${i}f-1000000s
 done
+
+for i in {200..1000..200}
+do 
+  for j in {2000000..10000000..2000000}
+  do
+    for k in 4 24 49
+    do
+      python3 ${root_dir}/data/generate-synth.py --signal_length $k --nodes $i --sample_count $j ${data_dir}/synth-100t-${i}n-${k}f-${j}s
+    done
+  done
+done
